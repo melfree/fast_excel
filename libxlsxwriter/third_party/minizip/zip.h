@@ -50,10 +50,9 @@ extern "C" {
 #endif
 
 /* #define HAVE_BZIP2 */
+#ifndef _ZLIB_H
 #include <sys/types.h>
 typedef _off64_t off64_t;
-   
-#ifndef _ZLIB_H
 #include "zlib.h"
 #endif
 
