@@ -12,6 +12,11 @@ endif
 UNAME := $(shell uname)
 
 # Change make and compiler options on AIX.
+ifeq ($(UNAME), AIX)
+CC = gcc
+CFLAGS += -maix64
+endif
+
 CC = gcc
 CFLAGS += -maix64
 
