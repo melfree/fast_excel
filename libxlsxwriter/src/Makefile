@@ -85,6 +85,12 @@ LIBXLSXWRITER_SO = libxlsxwriter.dylib
 SOFLAGS = -dynamiclib $(FPIC) -install_name /usr/lib/$(LIBXLSXWRITER_SO)
 endif
 
+# Change make and compiler options on AIX.
+ifeq ($(UNAME), AIX)
+CC = gcc
+CFLAGS += -maix64
+endif
+
 # Check for MinGW/MinGW64/Cygwin environments.
 ifneq (,$(findstring MINGW, $(UNAME)))
 MING_LIKE = y
