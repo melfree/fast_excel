@@ -17,9 +17,6 @@ CC = gcc
 CFLAGS += -maix64
 endif
 
-CC = gcc
-CFLAGS += -maix64
-
 # Check for MinGW/MinGW64/Cygwin environments.
 ifneq (,$(findstring MINGW, $(UNAME)))
 MING_LIKE = y
