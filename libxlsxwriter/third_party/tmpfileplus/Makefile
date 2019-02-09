@@ -12,7 +12,7 @@ endif
 UNAME := $(shell uname)
 
 # Change make and compiler options on AIX.
-ifeq ($(UNAME), AIX)
+ifeq ($(UNAME), AIX 1)
 CC = gcc
 CFLAGS += -maix64
 endif
