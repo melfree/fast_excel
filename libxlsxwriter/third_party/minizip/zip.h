@@ -51,6 +51,7 @@ extern "C" {
 
 /* #define HAVE_BZIP2 */
 #ifndef _ZLIB_H
+#include "stdio.h"
 #include "sys/types.h"
 #include "zlib.h"
 #endif
