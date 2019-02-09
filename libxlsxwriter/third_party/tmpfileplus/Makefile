@@ -11,6 +11,12 @@ endif
 
 UNAME := $(shell uname)
 
+# Change make and compiler options on AIX.
+ifeq ($(UNAME), AIX)
+CC = gcc
+CFLAGS += -maix64
+endif
+
 # Check for MinGW/MinGW64/Cygwin environments.
 ifneq (,$(findstring MINGW, $(UNAME)))
 MING_LIKE = y
