@@ -13,8 +13,7 @@ UNAME := $(shell uname)
 
 # Change make and compiler options on AIX.
 ifeq ($(UNAME), AIX)
-CC = g++
-CFLAGS += -maix64
+CC = gcc
 endif
 
 # Check for MinGW/MinGW64/Cygwin environments.
