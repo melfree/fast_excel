@@ -9,10 +9,10 @@ ifdef V
 Q=
 endif
 
-UNAME := $(shell uname -sr)
+UNAME := $(shell uname)
 
 # Change make and compiler options on AIX.
-ifeq ($(UNAME), AIX 1)
+ifeq ($(UNAME), AIX)
 CC = gcc
 CFLAGS += -maix64
 endif
