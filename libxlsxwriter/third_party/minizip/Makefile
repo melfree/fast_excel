@@ -14,7 +14,7 @@ UNAME := $(shell uname)
 # Change make and compiler options on AIX.
 ifeq ($(UNAME), AIX)
 CC = gcc
-CFLAGS += -maix64 -std=gnu11 -Doff_t=_off_t 
+CFLAGS += -maix64 -std=gnu11 -Doff_t=uLong -q64
 endif
 
 # Check for MinGW/MinGW64/Cygwin environments.
