@@ -70,7 +70,7 @@ LIBXLSXWRITER_SO = libxlsxwriter.so
 LIBXLSXWRITER_TO = libxlsxwriter_test.a
 
 # Flags passed to static linker.
-ARFLAGS = -X64 rc
+ARFLAGS = rc
 
 # Flags passed to dynamic linker.
 FPIC = -fPIC
@@ -87,6 +87,7 @@ endif
 
 # Change make and compiler options on AIX.
 ifeq ($(UNAME), AIX)
+ARFLAGS = -X64 rc
 CC = gcc
 CFLAGS += -maix64 -std=gnu11 -Doff_t=uLong
 endif
