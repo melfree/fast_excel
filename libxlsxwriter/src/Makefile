@@ -90,7 +90,7 @@ ifeq ($(UNAME), AIX)
 CC = gcc
 CFLAGS += -Doff_t=uLong
 endif
-
+ 
 # Check for MinGW/MinGW64/Cygwin environments.
 ifneq (,$(findstring MINGW, $(UNAME)))
 MING_LIKE = y
