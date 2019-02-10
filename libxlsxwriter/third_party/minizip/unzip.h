@@ -48,7 +48,6 @@ extern "C" {
 #endif
 
 #ifndef _ZLIB_H
-typedef long off_t;
 #include "zlib.h"
 #endif
 
