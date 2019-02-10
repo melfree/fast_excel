@@ -87,9 +87,8 @@ endif
 
 # Change make and compiler options on AIX.
 ifeq ($(UNAME), AIX)
-ARFLAGS = rc
 CC = gcc
-CFLAGS += -std=c++11 -Doff_t=uLong
+CFLAGS += -Doff_t=uLong
 endif
 
 # Check for MinGW/MinGW64/Cygwin environments.
