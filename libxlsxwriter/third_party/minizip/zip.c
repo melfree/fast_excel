@@ -26,6 +26,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#define __USE_LARGEFILE64
 #include <sys/types.h> 
 #include <unistd.h>
 #include "zlib.h"
