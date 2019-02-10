@@ -89,7 +89,7 @@ endif
 ifeq ($(UNAME), AIX)
 ARFLAGS = -X32 rc
 CC = gcc
-CFLAGS += -std=gnu11 -Doff_t=uLong
+CFLAGS += -std=c++11 -Doff_t=uLong
 endif
 
 # Check for MinGW/MinGW64/Cygwin environments.
